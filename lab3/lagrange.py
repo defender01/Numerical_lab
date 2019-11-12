@@ -23,12 +23,12 @@ print(X)
 Y = np.array([2., 8., 1., 9., 5., -3., -7.])
 print(Y)
 
-ans = lagrange_InterPolation(X, 2, Y, 3)
+ans = lagrange_InterPolation(X, 2, Y, X.shape[0])
 print(ans)
 
 xp = np.linspace(-10, 10, 100)
 # print(xp)
-yp = lagrange_InterPolation(X, xp, Y, 7)
+yp = lagrange_InterPolation(X, xp, Y, X.shape[0])
 plt.plot(xp, yp, '-', X, Y, 'ro')
 
 
